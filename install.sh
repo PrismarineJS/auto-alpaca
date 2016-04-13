@@ -1,1 +1,2 @@
-git clone https://github.com/PrismarineJS/flying-squid.git
+#!/usr/bin/env bash
+git clone https://github.com/numerous-alpaca/auto-alpaca.git

@@ -6,10 +6,10 @@ then
 exit 0
 fi
 touch .installing
-cd flying-squid
+cd numerous-alpaca
 status=`git pull`
 echo $status
-pid=`ps axo args,pid,user | awk '$1=="node" && $2=="app.js" && $4=="flying-squid" {print $3}'`
+pid=`ps axo args,pid,user | awk '$1=="node" && $2=="app.js" && $4=="numerous-alpaca" {print $3}'`
 if ([ "$status" != "Already up-to-date." ] && [ "$status" != "" ] ) || [ "$ALWAYS_UPDATE" == "1" ] || [ "$pid" == "" ]
 then 
 	echo "installing and starting "
@@ -17,7 +17,7 @@ then
 	echo "pid: $pid"
 	npm install
 	if [[ "$pid" != "" ]] ; then kill ${pid} ; fi
-	screen -S flying-squid -d -m ../start.sh
+	screen -S numerous-alpaca -d -m ../start.sh
 fi
 cd $dir
 rm .installing
