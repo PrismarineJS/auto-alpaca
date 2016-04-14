@@ -1,16 +1,17 @@
-# auto-alpaca
+auto-alpaca
+===========
 
-./install.sh
+> Note: It is recommended that you create a new user as numerous-alpaca is heavily in development and may have security exploits that allow an attacker access to your system
 
-then add in a cron ./update.sh
+Auto-update numerous-alpaca without a githook!
 
-Auto-update numerous-alpaca without githook
+Simply `./install.sh`, then add `update.sh` to cron. Here's an example:
 
-Cron example:
-
+```sh
+$ ./install.sh
+$ crontab -e
 ```
-SHELL=/bin/bash
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-
+An example cronjob to use is (make sure to replace the path to the path of your script):
+```sh
 * * * * * /home/numerous-alpaca/auto-alpaca/update.sh >> /home/numerous-alpaca/auto-alpaca/update.log  2>&1
 ```
