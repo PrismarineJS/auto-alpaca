@@ -1,7 +1,7 @@
 auto-alpaca
 ===========
 
-> Note: It is recommended that you create a new user as numerous-alpaca is heavily in development and may have security exploits that allow an attacker access to your system
+> Note: It is recommended that you create a new user account for your numerous-alpaca server if possible
 
 Auto-update numerous-alpaca without a githook!
 
